@@ -70,6 +70,7 @@
   padding: 1.5em;
   background-color: rgb(166, 225, 77);
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .fa-play:hover {
@@ -89,17 +90,37 @@
 }
 
 .video-preview img {
+  z-index: -1;
   width: 12em;
   margin-top: 8px;
   cursor: pointer;
-  /* box-sizing: border-box; */
+
+  /* Trick to avoid moving elements when hovering 1 */
+  /* display: block;
+  float: left;
+  margin: 10px;
+  box-sizing: border-box; */
+
   /* border: solid 5px rgba(166, 225, 77, 0); */
 }
-.selected img {
+
+  /* Trick to avoid moving elements when hovering 2 */
+
+/* .video-hover {
+  width: 100px;
+  height: 100px;
+  margin-top: 8px;
   border: solid 5px rgba(166, 225, 77, 1);
-}
+} */
+
+/* .selected img {
+  border: solid 5px rgba(166, 225, 77, 1);
+} */
 
 .video-preview img:hover {
   border: solid 5px rgba(166, 225, 77, 1);
+  /* Trick to avoid moving elements when hovering 1*/
+  margin: -5px;
+  overflow: hidden;
 }
 
